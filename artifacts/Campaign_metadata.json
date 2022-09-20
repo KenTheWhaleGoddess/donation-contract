@@ -1,0 +1,184 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountNeeded",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "accept",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "minAMount",
+						"type": "uint256"
+					}
+				],
+				"name": "createDonation",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "campaignAddress",
+						"type": "address"
+					}
+				],
+				"name": "donateToCampaign",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getCampaigns",
+				"outputs": [
+					{
+						"internalType": "contract Donation[]",
+						"name": "",
+						"type": "address[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "campaignAddress",
+						"type": "address"
+					}
+				],
+				"name": "getCampainBalance",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "campaignAddress",
+						"type": "address"
+					}
+				],
+				"name": "getCampainName",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "campaignAddress",
+						"type": "address"
+					}
+				],
+				"name": "getCampainOwner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "campaignAddress",
+						"type": "address"
+					}
+				],
+				"name": "withdrawFromCampaign",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Campaign.sol": "Campaign"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Campaign.sol": {
+			"keccak256": "0xdb32688b0135dcd03f7d216d3b8ce1ade153492f6cc0520219a7b05c16bccf53",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://3cd6fada104b4e5f37bda0b5fd78665bafd2e357a3a8c20353da4e5f51eb212e",
+				"dweb:/ipfs/QmXfUyZUouizft541GGpmTozd5FThHss19uk6cm31zfPMQ"
+			]
+		},
+		"Donation.sol": {
+			"keccak256": "0xaf78d1807b0b5b0f4bfd0120e3ca52e71d63a7156a05a7f3fe1e33584cbdd1c3",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://940ad55c3cb3f4cd86035a5175e9df6756eb5a0f97af144971f8222c8a22c456",
+				"dweb:/ipfs/QmcF2fxTj8yTDjG4Kd4gudeN17B8ctrycTjBf3TjXCeuxy"
+			]
+		}
+	},
+	"version": 1
+}

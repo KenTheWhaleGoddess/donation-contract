@@ -1,0 +1,51 @@
+{
+	"compiler": {
+		"version": "0.8.7+commit.e28d00a7"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"TimeLock.sol": "AssetLocker"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"TimeLock.sol": {
+			"keccak256": "0x15a55326ef0cf386612ead990a4d479e3d7685f2c15a9ea78218a52bce4b897b",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://bc82cb39ac65e643bdf004c31744df51a51bce763be21edc0a7ef7ccc07c759b",
+				"dweb:/ipfs/QmcBoyEbW31ESW4UNm8imZRjqgWHQ2LyMtsUecDQpCeS7Z"
+			]
+		}
+	},
+	"version": 1
+}

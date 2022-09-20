@@ -1,0 +1,645 @@
+{
+	"id": "963921467682784a07fc621ba4192226",
+	"_format": "hh-sol-build-info-1",
+	"solcVersion": "0.8.7",
+	"solcLongVersion": "0.8.7+commit.e28d00a7",
+	"input": {
+		"language": "Solidity",
+		"sources": {
+			"TimeLock.sol": {
+				"content": "// SPDX-License-Identifier: GPL-3.0\n\npragma solidity >=0.7.0 <0.9.0;\n\ncontract AssetLocker {\n\n    address _locker;\n    uint lockTime;\n    \n\n    constructor() {\n        _locker = msg.sender;\n    }\n\n    \n}"
+			}
+		},
+		"settings": {
+			"optimizer": {
+				"enabled": false,
+				"runs": 200
+			},
+			"outputSelection": {
+				"*": {
+					"": [
+						"ast"
+					],
+					"*": [
+						"abi",
+						"metadata",
+						"devdoc",
+						"userdoc",
+						"storageLayout",
+						"evm.legacyAssembly",
+						"evm.bytecode",
+						"evm.deployedBytecode",
+						"evm.methodIdentifiers",
+						"evm.gasEstimates",
+						"evm.assembly"
+					]
+				}
+			}
+		}
+	},
+	"output": {
+		"contracts": {
+			"TimeLock.sol": {
+				"AssetLocker": {
+					"abi": [
+						{
+							"inputs": [],
+							"stateMutability": "nonpayable",
+							"type": "constructor"
+						}
+					],
+					"devdoc": {
+						"kind": "dev",
+						"methods": {},
+						"version": 1
+					},
+					"evm": {
+						"assembly": "    /* \"TimeLock.sol\":70:203  contract AssetLocker {... */\n  mstore(0x40, 0x80)\n    /* \"TimeLock.sol\":144:195  constructor() {... */\n  callvalue\n  dup1\n  iszero\n  tag_1\n  jumpi\n  0x00\n  dup1\n  revert\ntag_1:\n  pop\n    /* \"TimeLock.sol\":178:188  msg.sender */\n  caller\n    /* \"TimeLock.sol\":168:175  _locker */\n  0x00\n  dup1\n    /* \"TimeLock.sol\":168:188  _locker = msg.sender */\n  0x0100\n  exp\n  dup2\n  sload\n  dup2\n  0xffffffffffffffffffffffffffffffffffffffff\n  mul\n  not\n  and\n  swap1\n  dup4\n  0xffffffffffffffffffffffffffffffffffffffff\n  and\n  mul\n  or\n  swap1\n  sstore\n  pop\n    /* \"TimeLock.sol\":70:203  contract AssetLocker {... */\n  dataSize(sub_0)\n  dup1\n  dataOffset(sub_0)\n  0x00\n  codecopy\n  0x00\n  return\nstop\n\nsub_0: assembly {\n        /* \"TimeLock.sol\":70:203  contract AssetLocker {... */\n      mstore(0x40, 0x80)\n      0x00\n      dup1\n      revert\n\n    auxdata: 0xa264697066735822122034174ef67775949972ed0bad4e1acee4c381648ff28e7fa93f65136b2cec3bc964736f6c63430008070033\n}\n",
+						"bytecode": {
+							"functionDebugData": {
+								"@_14": {
+									"entryPoint": null,
+									"id": 14,
+									"parameterSlots": 0,
+									"returnSlots": 0
+								}
+							},
+							"generatedSources": [],
+							"linkReferences": {},
+							"object": "6080604052348015600f57600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550603f80605d6000396000f3fe6080604052600080fdfea264697066735822122034174ef67775949972ed0bad4e1acee4c381648ff28e7fa93f65136b2cec3bc964736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE CALLVALUE DUP1 ISZERO PUSH1 0xF JUMPI PUSH1 0x0 DUP1 REVERT JUMPDEST POP CALLER PUSH1 0x0 DUP1 PUSH2 0x100 EXP DUP2 SLOAD DUP2 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF MUL NOT AND SWAP1 DUP4 PUSH20 0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF AND MUL OR SWAP1 SSTORE POP PUSH1 0x3F DUP1 PUSH1 0x5D PUSH1 0x0 CODECOPY PUSH1 0x0 RETURN INVALID PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 CALLVALUE OR 0x4E 0xF6 PUSH24 0x75949972ED0BAD4E1ACEE4C381648FF28E7FA93F65136B2C 0xEC EXTCODESIZE 0xC9 PUSH5 0x736F6C6343 STOP ADDMOD SMOD STOP CALLER ",
+							"sourceMap": "70:133:0:-:0;;;144:51;;;;;;;;;;178:10;168:7;;:20;;;;;;;;;;;;;;;;;;70:133;;;;;;"
+						},
+						"deployedBytecode": {
+							"functionDebugData": {},
+							"generatedSources": [],
+							"immutableReferences": {},
+							"linkReferences": {},
+							"object": "6080604052600080fdfea264697066735822122034174ef67775949972ed0bad4e1acee4c381648ff28e7fa93f65136b2cec3bc964736f6c63430008070033",
+							"opcodes": "PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x0 DUP1 REVERT INVALID LOG2 PUSH5 0x6970667358 0x22 SLT KECCAK256 CALLVALUE OR 0x4E 0xF6 PUSH24 0x75949972ED0BAD4E1ACEE4C381648FF28E7FA93F65136B2C 0xEC EXTCODESIZE 0xC9 PUSH5 0x736F6C6343 STOP ADDMOD SMOD STOP CALLER ",
+							"sourceMap": "70:133:0:-:0;;;;;"
+						},
+						"gasEstimates": {
+							"creation": {
+								"codeDepositCost": "12600",
+								"executionCost": "24332",
+								"totalCost": "36932"
+							}
+						},
+						"legacyAssembly": {
+							".code": [
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "PUSH",
+									"source": 0,
+									"value": "80"
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "PUSH",
+									"source": 0,
+									"value": "40"
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "MSTORE",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "CALLVALUE",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "ISZERO",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "PUSH [tag]",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "JUMPI",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "REVERT",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "tag",
+									"source": 0,
+									"value": "1"
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "JUMPDEST",
+									"source": 0
+								},
+								{
+									"begin": 144,
+									"end": 195,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 178,
+									"end": 188,
+									"name": "CALLER",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 175,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 168,
+									"end": 175,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "PUSH",
+									"source": 0,
+									"value": "100"
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "EXP",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "SLOAD",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "DUP2",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "NOT",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "DUP4",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "PUSH",
+									"source": 0,
+									"value": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF"
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "AND",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "MUL",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "OR",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "SWAP1",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "SSTORE",
+									"source": 0
+								},
+								{
+									"begin": 168,
+									"end": 188,
+									"name": "POP",
+									"source": 0
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "PUSH #[$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "DUP1",
+									"source": 0
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "PUSH [$]",
+									"source": 0,
+									"value": "0000000000000000000000000000000000000000000000000000000000000000"
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "CODECOPY",
+									"source": 0
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "PUSH",
+									"source": 0,
+									"value": "0"
+								},
+								{
+									"begin": 70,
+									"end": 203,
+									"name": "RETURN",
+									"source": 0
+								}
+							],
+							".data": {
+								"0": {
+									".auxdata": "a264697066735822122034174ef67775949972ed0bad4e1acee4c381648ff28e7fa93f65136b2cec3bc964736f6c63430008070033",
+									".code": [
+										{
+											"begin": 70,
+											"end": 203,
+											"name": "PUSH",
+											"source": 0,
+											"value": "80"
+										},
+										{
+											"begin": 70,
+											"end": 203,
+											"name": "PUSH",
+											"source": 0,
+											"value": "40"
+										},
+										{
+											"begin": 70,
+											"end": 203,
+											"name": "MSTORE",
+											"source": 0
+										},
+										{
+											"begin": 70,
+											"end": 203,
+											"name": "PUSH",
+											"source": 0,
+											"value": "0"
+										},
+										{
+											"begin": 70,
+											"end": 203,
+											"name": "DUP1",
+											"source": 0
+										},
+										{
+											"begin": 70,
+											"end": 203,
+											"name": "REVERT",
+											"source": 0
+										}
+									]
+								}
+							}
+						},
+						"methodIdentifiers": {}
+					},
+					"metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"TimeLock.sol\":\"AssetLocker\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"TimeLock.sol\":{\"keccak256\":\"0x503646f6ad4bacb51b23ee60cd1ce140316c945dcfb8f3d46df06d845722b110\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://85123f58d3385c9be85d13465ed1d8db36c0a3d4ad0458722b7ab2c06797d7df\",\"dweb:/ipfs/QmdbsdcH9otPhgirU2ASAwiVh9iG6yZVgxYjQMRiF659rm\"]}},\"version\":1}",
+					"storageLayout": {
+						"storage": [
+							{
+								"astId": 3,
+								"contract": "TimeLock.sol:AssetLocker",
+								"label": "_locker",
+								"offset": 0,
+								"slot": "0",
+								"type": "t_address"
+							},
+							{
+								"astId": 5,
+								"contract": "TimeLock.sol:AssetLocker",
+								"label": "lockTime",
+								"offset": 0,
+								"slot": "1",
+								"type": "t_uint256"
+							}
+						],
+						"types": {
+							"t_address": {
+								"encoding": "inplace",
+								"label": "address",
+								"numberOfBytes": "20"
+							},
+							"t_uint256": {
+								"encoding": "inplace",
+								"label": "uint256",
+								"numberOfBytes": "32"
+							}
+						}
+					},
+					"userdoc": {
+						"kind": "user",
+						"methods": {},
+						"version": 1
+					}
+				}
+			}
+		},
+		"sources": {
+			"TimeLock.sol": {
+				"ast": {
+					"absolutePath": "TimeLock.sol",
+					"exportedSymbols": {
+						"AssetLocker": [
+							15
+						]
+					},
+					"id": 16,
+					"license": "GPL-3.0",
+					"nodeType": "SourceUnit",
+					"nodes": [
+						{
+							"id": 1,
+							"literals": [
+								"solidity",
+								">=",
+								"0.7",
+								".0",
+								"<",
+								"0.9",
+								".0"
+							],
+							"nodeType": "PragmaDirective",
+							"src": "37:31:0"
+						},
+						{
+							"abstract": false,
+							"baseContracts": [],
+							"contractDependencies": [],
+							"contractKind": "contract",
+							"fullyImplemented": true,
+							"id": 15,
+							"linearizedBaseContracts": [
+								15
+							],
+							"name": "AssetLocker",
+							"nameLocation": "79:11:0",
+							"nodeType": "ContractDefinition",
+							"nodes": [
+								{
+									"constant": false,
+									"id": 3,
+									"mutability": "mutable",
+									"name": "_locker",
+									"nameLocation": "106:7:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 15,
+									"src": "98:15:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_address",
+										"typeString": "address"
+									},
+									"typeName": {
+										"id": 2,
+										"name": "address",
+										"nodeType": "ElementaryTypeName",
+										"src": "98:7:0",
+										"stateMutability": "nonpayable",
+										"typeDescriptions": {
+											"typeIdentifier": "t_address",
+											"typeString": "address"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"constant": false,
+									"id": 5,
+									"mutability": "mutable",
+									"name": "lockTime",
+									"nameLocation": "124:8:0",
+									"nodeType": "VariableDeclaration",
+									"scope": 15,
+									"src": "119:13:0",
+									"stateVariable": true,
+									"storageLocation": "default",
+									"typeDescriptions": {
+										"typeIdentifier": "t_uint256",
+										"typeString": "uint256"
+									},
+									"typeName": {
+										"id": 4,
+										"name": "uint",
+										"nodeType": "ElementaryTypeName",
+										"src": "119:4:0",
+										"typeDescriptions": {
+											"typeIdentifier": "t_uint256",
+											"typeString": "uint256"
+										}
+									},
+									"visibility": "internal"
+								},
+								{
+									"body": {
+										"id": 13,
+										"nodeType": "Block",
+										"src": "158:37:0",
+										"statements": [
+											{
+												"expression": {
+													"id": 11,
+													"isConstant": false,
+													"isLValue": false,
+													"isPure": false,
+													"lValueRequested": false,
+													"leftHandSide": {
+														"id": 8,
+														"name": "_locker",
+														"nodeType": "Identifier",
+														"overloadedDeclarations": [],
+														"referencedDeclaration": 3,
+														"src": "168:7:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address",
+															"typeString": "address"
+														}
+													},
+													"nodeType": "Assignment",
+													"operator": "=",
+													"rightHandSide": {
+														"expression": {
+															"id": 9,
+															"name": "msg",
+															"nodeType": "Identifier",
+															"overloadedDeclarations": [],
+															"referencedDeclaration": 4294967281,
+															"src": "178:3:0",
+															"typeDescriptions": {
+																"typeIdentifier": "t_magic_message",
+																"typeString": "msg"
+															}
+														},
+														"id": 10,
+														"isConstant": false,
+														"isLValue": false,
+														"isPure": false,
+														"lValueRequested": false,
+														"memberName": "sender",
+														"nodeType": "MemberAccess",
+														"src": "178:10:0",
+														"typeDescriptions": {
+															"typeIdentifier": "t_address",
+															"typeString": "address"
+														}
+													},
+													"src": "168:20:0",
+													"typeDescriptions": {
+														"typeIdentifier": "t_address",
+														"typeString": "address"
+													}
+												},
+												"id": 12,
+												"nodeType": "ExpressionStatement",
+												"src": "168:20:0"
+											}
+										]
+									},
+									"id": 14,
+									"implemented": true,
+									"kind": "constructor",
+									"modifiers": [],
+									"name": "",
+									"nameLocation": "-1:-1:-1",
+									"nodeType": "FunctionDefinition",
+									"parameters": {
+										"id": 6,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "155:2:0"
+									},
+									"returnParameters": {
+										"id": 7,
+										"nodeType": "ParameterList",
+										"parameters": [],
+										"src": "158:0:0"
+									},
+									"scope": 15,
+									"src": "144:51:0",
+									"stateMutability": "nonpayable",
+									"virtual": false,
+									"visibility": "public"
+								}
+							],
+							"scope": 16,
+							"src": "70:133:0",
+							"usedErrors": []
+						}
+					],
+					"src": "37:166:0"
+				},
+				"id": 0
+			}
+		}
+	}
+}
